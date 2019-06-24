@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="activateHelloTune" class="com.SpringDI.ActivateHelloTune"></bean>
+	<bean id="activateMissedCallMessageService" class="com.SpringDI.MissedCallMessageService"></bean>
+
+	<bean id="airtel" class="com.SpringDI.Airtel">
+		<property name="service">
+			<bean class="com.SpringDI.DataService"></bean>
+		</property>
+		
+		<!-- Alternate way of doing the same -->
+		
+		<!-- <property name="service" ref="activateMissedCallMessageService"></property> -->
+
+	</bean>
+	
+	<bean id="heart1" class="com.autowired.Heart"></bean>
+	
+	<bean id="human" class="com.autowired.Human" autowire="constructor"/>
+	
+<context:property-placeholder location="classpath:student-details.properties"/>
+	
+	<bean id="appStudent" class="com.literalsUsingPropUsingBeanXml.AppStudent">
+		<property name="studentName" value="${student.name}" />
+		<property name="studentHobby" value="${student.hobby}" />
+		<property name="studentCourse" value="${student.course}" />
+	</bean>
+	<context:annotation-config />
+	
+	<bean id="appStudentAnnotation" class="com.literalsUsingPropUsingBeanAnnotation.AppStudentAnnotation">
+		
+	</bean>
+	
+
+</beans>
