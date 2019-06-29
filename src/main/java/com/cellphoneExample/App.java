@@ -1,4 +1,4 @@
-package com.SpringDI;
+package com.cellphoneExample;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

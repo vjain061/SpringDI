@@ -6,12 +6,13 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
-
+        
+        <context:component-scan base-package="com" />
 
 	<bean id="activateHelloTune" class="com.SpringDI.ActivateHelloTune"></bean>
 	<bean id="activateMissedCallMessageService" class="com.SpringDI.MissedCallMessageService"></bean>
 
-	<bean id="airtel" class="com.SpringDI.Airtel">
+	<bean id="airtel" class="com.SpringDI.Airtel" >
 		<property name="service">
 			<bean class="com.SpringDI.DataService"></bean>
 		</property>
@@ -38,6 +39,8 @@
 	<bean id="appStudentAnnotation" class="com.literalsUsingPropUsingBeanAnnotation.AppStudentAnnotation">
 		
 	</bean>
+	
+	<bean id="employee" class="com.diffBetweenPrototypeAndSingletonBean.Employee"></bean>
 	
 
 </beans>

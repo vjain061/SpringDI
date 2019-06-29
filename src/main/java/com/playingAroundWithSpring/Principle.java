@@ -1,4 +1,4 @@
-package playingAroundWithSpring;
+package com.playingAroundWithSpring;
 
 import org.springframework.stereotype.Component;
 

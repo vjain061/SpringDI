@@ -1,4 +1,4 @@
-package playingAroundWithSpring;
+package com.playingAroundWithSpring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

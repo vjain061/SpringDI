@@ -1,4 +1,4 @@
-package com.SpringDI;
+package com.cellphoneExample;
 
 public class MissedCallMessageService implements Service {
 
